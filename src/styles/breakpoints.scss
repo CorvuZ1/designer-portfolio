@@ -1,0 +1,41 @@
+@mixin vw-xxlarge {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin vw-xlarge {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin vw-large {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin vw-medium {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin vw-small {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin vw-xsmall {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin vw-xxsmall {
+  @media (max-width: 400px) {
+    @content;
+  }
+}

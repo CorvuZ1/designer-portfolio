@@ -1,0 +1,16 @@
+@import "@/styles/breakpoints.scss";
+
+.root {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+
+  @include vw-medium {
+    padding: 0 40px;
+  }
+
+  @include vw-small {
+    padding: 0 16px;
+  }
+}

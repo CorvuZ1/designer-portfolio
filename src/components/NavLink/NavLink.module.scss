@@ -1,0 +1,17 @@
+.root {
+  font-weight: 600;
+  font-size: 14px;
+  transition-duration: 1s;
+  position: relative;
+  display: flex;
+  height: fit-content;
+
+  &:not(:last-child) {
+    margin-right: 41px;
+  }
+}
+
+.active {
+  padding: 0 4px 2px 4px;
+  border-bottom: 2px solid #2b2b2b;
+}

@@ -1,0 +1,15 @@
+@import "@/styles/breakpoints.scss";
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 36px;
+
+  @include vw-medium {
+    grid-gap: 18px;
+  }
+
+  @include vw-small {
+    grid-template-columns: 1fr;
+  }
+}

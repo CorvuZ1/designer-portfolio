@@ -1,0 +1,35 @@
+@import "@/styles/vars.scss";
+
+.name,
+.patronymic {
+  line-height: 24px;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+}
+
+.name {
+  font-weight: 400;
+}
+
+.patronymic {
+  font-weight: 700;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: $primary-color;
+    position: absolute;
+    border-radius: 50px;
+    right: -11px;
+    top: -3px;
+  }
+}
+
+.caption {
+  color: $primary-color;
+  margin-top: 2px;
+  font-weight: 500;
+  font-size: 14px;
+}
