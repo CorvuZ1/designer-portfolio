@@ -11,7 +11,7 @@ export default function WorkCard({ title, image, index, slug }) {
   const delay = 0.7;
 
   return (
-    <Link href={`works/${slug}`}>
+    <Link href={`work/${slug}`}>
       <motion.div
         initial={{ opacity: 0, scale: 0, rotate: -30 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
