@@ -25,7 +25,7 @@ export default function Layout({ children, title }) {
         <motion.main
           initial={{ y: "5vh", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.35, type: "spring", bounce: 0.5, duration: 0.9 }}
+          transition={{ delay: 0.23, type: "spring", bounce: 0.5, duration: 0.9 }}
           className={classes.main}
         >
           {children}

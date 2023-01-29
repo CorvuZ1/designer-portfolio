@@ -6,9 +6,9 @@ export async function getAllWorks() {
     query getAllWorks {
       portfolio(first: 1000) {
         nodes {
-          content
           title
           id
+          slug
           featuredImage {
             node {
               caption
@@ -26,4 +26,24 @@ export async function getAllWorks() {
   });
 
   return response.data.portfolio.nodes;
+}
+
+export async function getWorkData(slug) {
+  const GET_WORK_DATA = gql`
+    query getWorkData($slug: String!) {
+      workBy(slug: $slug) {
+        content
+        title
+      }
+    }
+  `;
+
+  const response = await client.query({
+    query: GET_WORK_DATA,
+    variables: {
+      slug
+    }
+  });
+
+  return response.data.workBy;
 }
