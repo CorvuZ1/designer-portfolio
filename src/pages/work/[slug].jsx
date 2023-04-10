@@ -1,10 +1,11 @@
+import Heading from "@/components/Heading/Heading";
 import Layout from "@/components/Layout/Layout";
 import { getWorkData } from "@/lib/requests/queries";
 
 export default function WorkPage({ title, content }) {
   return (
     <Layout title={title}>
-      <h1>{title}</h1>
+      <Heading isLargeSize={true}>{title}</Heading>
       <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </Layout>
   );
@@ -12,12 +13,11 @@ export default function WorkPage({ title, content }) {
 
 export async function getStaticProps(ctx) {
   const workData = await getWorkData(ctx.params.slug);
-  const { title, content } = workData;
 
   return {
     props: {
-      title,
-      content
+      title: workData.title,
+      content: workData.editor.content
     },
     revalidate: 120
   };

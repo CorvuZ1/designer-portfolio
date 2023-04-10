@@ -1,3 +1,5 @@
+import Button from "@/components/Button/Button";
+import Heading from "@/components/Heading/Heading";
 import Layout from "@/components/Layout/Layout";
 import WorkList from "@/components/WorkList/WorkList";
 import { getAllWorks } from "@/lib/requests/queries";
@@ -5,8 +7,11 @@ import { getAllWorks } from "@/lib/requests/queries";
 export default function HomePage({ works }) {
   return (
     <Layout title="Главная">
-      <h4>МОИ РАБОТЫ</h4>
+      <Heading mb="small">МОИ РАБОТЫ</Heading>
       <WorkList works={works} />
+      <Button type="inner-link" href="/contacts" isCentered={true}>
+        НАПИСАТЬ МНЕ
+      </Button>
     </Layout>
   );
 }

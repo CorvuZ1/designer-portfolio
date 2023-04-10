@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 36px;
+  margin-bottom: 36px;
 
   @include vw-medium {
     grid-gap: 18px;

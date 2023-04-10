@@ -1,21 +1,19 @@
 import classes from "./WorkCard.module.scss";
 import Image from "next/image";
-import { Manrope } from "@next/font/google";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-const manrope = Manrope({ weight: "600", subsets: ["cyrillic"] });
+import { manrope } from "@/lib/fonts";
 
 export default function WorkCard({ title, image, index, slug }) {
-  const delay = 0.7;
+  const delay = 0.9;
 
   return (
     <Link href={`work/${slug}`}>
       <motion.div
-        initial={{ opacity: 0, scale: 0, rotate: -30 }}
+        initial={{ opacity: 0, scale: 0.6, rotate: -15 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{ delay: index / 5 + delay }}
+        transition={{ delay: index / 2.5 + delay, duration: 0.2 }}
         className={classes.root}
       >
         <Image
@@ -24,8 +22,8 @@ export default function WorkCard({ title, image, index, slug }) {
           className={classes.image}
           width={602}
           height={405}
-          alt={image?.node?.altText}
-          src={image.node.sourceUrl}
+          alt={image?.altText}
+          src={image.sourceUrl}
         />
         <span className={clsx(manrope.className, classes.title)}>{title}</span>
       </motion.div>

@@ -18,7 +18,9 @@ export default function NavLink({ href, children }) {
 
   return (
     <Link className={clsx(classes.root, isActive && classes.active)} href={href}>
-      <motion.span {...animations}>{children}</motion.span>
+      <motion.span className={classes.text} {...animations}>
+        {children}
+      </motion.span>
     </Link>
   );
 }

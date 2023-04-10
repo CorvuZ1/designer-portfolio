@@ -6,7 +6,7 @@ import NavLink from "../NavLink/NavLink";
 export default function Header() {
   const animations = {
     animate: { x: 0, opacity: 1 },
-    transition: { duration: 0.6, type: "spring", bounce: 0.4 }
+    transition: { duration: 0.8, type: "spring", bounce: 0.4 }
   };
 
   return (
@@ -15,9 +15,8 @@ export default function Header() {
         <motion.div
           {...animations}
           initial={{ x: "-15vw", opacity: 0 }}
-          whileHover={{ scale: 1.07 }}
-          whileTap={{ scale: 1.02 }}
-          transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 1.015 }}
           className={classes.left}
         >
           <Designer />

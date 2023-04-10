@@ -1,0 +1,42 @@
+@import "@/styles/vars.scss";
+
+.root {
+  background-color: $primary-color;
+  max-width: 460px;
+  width: 100%;
+  border-radius: 14px;
+  border: 0;
+  min-height: 76px;
+  font-size: 20px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  transition-duration: 0.4s;
+  position: relative;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+}
+
+.img-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.group {
+  &:not(:last-child) {
+    margin-bottom: 27px;
+  }
+}
+
+.center {
+  margin: 0 auto;
+}
